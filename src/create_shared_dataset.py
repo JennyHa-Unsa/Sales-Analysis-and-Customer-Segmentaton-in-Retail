@@ -8,7 +8,8 @@ import numpy as np
 
 def create_csv():
     # Read data from csv
-    path = "src/static/dataset/"
+    # path = "static/dataset/"
+    path = "static/dataset/"
     ctg = pd.read_csv(path+"prod_cat_info.csv") #categories csv
     cst = pd.read_csv(path+"Customer.csv")
     tr = pd.read_csv(path+"Transactions.csv")
@@ -25,7 +26,8 @@ def create_csv():
     #Merge with customer information
     tr_final = pd.merge(tr_merged, cst,  how='left', left_on=['cust_id'], 
     right_on = ['customer_Id'])
-    tr_final['tran_date'] =pd.to_datetime(tr_final.tran_date)
+    # tr_final['tran_date'] =pd.to_datetime(tr_final.tran_date)
+    tr_final['tran_date'] = pd.to_datetime(tr_final['tran_date'], dayfirst=True, errors='coerce')
     tr_final = tr_final.drop(columns=['customer_Id', 'prod_sub_cat_code'])
     tr_final = tr_final.sort_values(by=["tran_date"])
     tr_final.head()
@@ -43,7 +45,7 @@ def create_csv():
 def filter_csv(sex,city,shop):
 
     # Read full data from csv
-    path = "src/static/dataset/"
+    path = "static/dataset/"
     df = pd.read_csv(path+"full_data.csv")
     
     # Convert types

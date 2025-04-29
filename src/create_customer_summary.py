@@ -8,7 +8,7 @@ import numpy as np
 def customer_summary():
 
     # Read data from needed csv into dataframe
-    path = "src/static/dataset/"
+    path = "static/dataset/"
     cst_data = pd.read_csv(path+"Customer.csv")
     rfm_data = pd.read_csv(path+"rfm_data.csv")
     pca_data = pd.read_csv(path+"pca_kmeans_data.csv")

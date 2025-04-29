@@ -14,7 +14,7 @@ def clustering(n_components, n_clusters):
     np.random.seed(0)
 
     # Read csv file
-    path = "src/static/dataset/"
+    path = "static/dataset/"
     data = pd.read_csv(path+"full_data.csv")
     print(data.head())
 

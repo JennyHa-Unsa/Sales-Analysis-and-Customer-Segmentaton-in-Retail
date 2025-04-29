@@ -33,7 +33,7 @@ def rfm_level(df):
 # Main function to call and run the rfm
 def rfm():
     # Read csv file
-    path = "src/static/dataset/"
+    path = "static/dataset/"
     data = pd.read_csv(path+"full_data.csv")
     #print(data.head())
 
