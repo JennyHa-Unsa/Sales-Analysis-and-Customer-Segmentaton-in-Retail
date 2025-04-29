@@ -292,3 +292,4 @@ GitHub.sublime-settings
 !.vscode/extensions.json
 *.code-workspace
 mi-entorno/
+src/__pycache__/
