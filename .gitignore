@@ -293,3 +293,4 @@ GitHub.sublime-settings
 *.code-workspace
 mi-entorno/
 src/__pycache__/
+src/static/dataset/
